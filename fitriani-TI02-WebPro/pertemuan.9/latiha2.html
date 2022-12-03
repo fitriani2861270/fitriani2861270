@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan javascrip 2</title>
+</head>
+<body>
+    <h2>dollar to rupiah</h2>
+    <form>
+        <label for="dollar">dollar : </label><input type="text" id="dollar">
+        <br> <br>
+        <label for="kurs">kurs rupiah : </label><input type="text" id="kurs">
+        <br><br>
+        <input type="button" value="hitung" onclick="hitung_dollar()"></button>
+        <br><br>
+        <label for="hasil">hasil : </label><input type="text" id="hasil">
+    </form>
+
+    <h2>rupiah to dollar</h2>
+    <from>
+        <label for="rupiah">rupiah : </label><input type="text" id="rupiah">
+        <br><br>
+        <input type="button" value="hitung" onclick="hitung_rupiah()"></button>
+        <br><br>
+        <label for="hasil2">hasil2 : </label><input type="text" id="hasil2">
+    </from>
+
+    <script>
+        function hitung_dollar(){
+            let dollar = document.getElementById("dollar").value;
+            let kurs = document.getElementById("kurs").value;
+            let hasil = dollar * kurs;
+            document.getElementById("hasil").value ="Rp." + hasil
+        }
+
+        function hitung_rupiah() {
+            let rupiah = document.getElementById("rupiah").value;
+            let hasil = rupiah * (1/14650);
+            document.getElementById("hasil2").value = "$" + hasil;
+        }
+    </script>
+</body>
+</html>
